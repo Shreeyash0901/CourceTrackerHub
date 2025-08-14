@@ -84,7 +84,6 @@ describe('Tracker Component', () => {
 
   test('displays correct task count for each day', () => {
     render(<Tracker />);
-    const dayElements = screen.getAllByText(/Day \d+/);
     
     // Check first day has correct task count
     expect(screen.getByText(/Day 1: Getting Started with Node\.js/)).toBeInTheDocument();
