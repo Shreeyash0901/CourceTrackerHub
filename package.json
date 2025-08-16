@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Shreeyash0901.github.io/30days-Nodejs-tracker",
+  "homepage": "https://github.com/Shreeyash0901/CourceTrackerHub.git",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -13,6 +13,8 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "framer-motion": "^12.23.12",
+    "lucide-react": "^0.539.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.6.2"
