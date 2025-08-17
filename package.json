@@ -3,7 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://github.com/Shreeyash0901/CourceTrackerHub.git",
+ "homepage": "https://Shreeyash0901.github.io/CourceTrackerHub/",
+
   "scripts": {
     "dev": "vite",
     "build": "vite build",
