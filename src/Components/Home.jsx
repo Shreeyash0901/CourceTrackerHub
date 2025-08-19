@@ -101,8 +101,46 @@ export default function Home() {
     },
   ];
 
+ const quotes = [
+  "Success is the sum of small efforts repeated day in and day out.",
+  "Don’t watch the clock; do what it does. Keep going.",
+  "Great things never come from comfort zones.",
+  "Push yourself, because no one else is going to do it for you.",
+  "Dream it. Wish it. Do it.",
+  "Small progress is still progress.",
+  "Discipline is the bridge between goals and accomplishment.",
+  "Hard work beats talent when talent doesn’t work hard.",
+  "Focus on being productive instead of busy.",
+  "Consistency is what transforms average into excellence.",
+  "Opportunities don’t happen, you create them.",
+  "Do something today that your future self will thank you for.",
+  "The harder you work for something, the greater you’ll feel when you achieve it.",
+  "Don’t stop until you’re proud.",
+  "Your limitation—it’s only your imagination.",
+  "Sometimes later becomes never. Do it now.",
+  "Great things take time. Stay patient and stay consistent.",
+  "Work hard in silence, let success make the noise.",
+  "Success doesn’t come to you, you go to it.",
+  "Dream bigger. Work harder.",
+  "Believe you can and you’re halfway there.",
+  "Act as if what you do makes a difference. It does.",
+  "Don’t wait for opportunity. Create it.",
+  "It always seems impossible until it’s done.",
+  "Start where you are. Use what you have. Do what you can.",
+  "The secret of getting ahead is getting started.",
+  "Fall seven times and stand up eight.",
+  "A little progress each day adds up to big results.",
+  "Difficult roads often lead to beautiful destinations.",
+  "Stay positive, work hard, and make it happen."
+];
+
+
+  // ✅ Pick a random quote
+  const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white p-6">
+   <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white p-6">
       <motion.header
         className="max-w-4xl mx-auto text-center py-12"
         initial={{ opacity: 0, y: -30 }}
@@ -116,6 +154,17 @@ export default function Home() {
         </p>
       </motion.header>
 
+      {/* ✅ Motivational Quote Section */}
+      <motion.div
+        className="max-w-3xl mx-auto mb-12 text-center bg-gray-800/70 p-6 rounded-2xl border border-gray-700 shadow-lg"
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8 }}
+      >
+        <p className="text-xl italic text-gray-200">“{randomQuote}”</p>
+      </motion.div>
+
+      {/* ✅ Course Grid Section */}
       <motion.div
         className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto"
         initial="hidden"
@@ -148,8 +197,6 @@ export default function Home() {
           </motion.div>
         ))}
       </motion.div>
-
-      
     </div>
   );
 }

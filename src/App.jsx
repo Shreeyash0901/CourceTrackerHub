@@ -1,23 +1,22 @@
-import { Routes, Route } from "react-router-dom";
-import Navbar from "./Components/Navbar";
-import Footer from "./Components/Footer";
-
 // Pages
+// Course Trackers
 import Home from "./Components/Home";
 import About from "./Components/About";
-
-// Course Trackers
+import Navbar from "./Components/Navbar";
+import Footer from "./Components/Footer";
+import { Routes, Route } from "react-router-dom";
 import Tracker from "./Components/Tracker"; // Node.js
 import JavaCourseTracker from "./Components/Tracker2";
-import AdvancedJavaTracker from "./Components/JavaAdvancedTracker";
-import JavaScriptTracker from "./Components/Tracker3_javascript";
-import HtmlCourseTracker from "./Components/HtmlCourseTracker";
 import CSSCourseTracker from "./Components/CssCourseTracker";
+import HtmlCourseTracker from "./Components/HtmlCourseTracker";
+import JavaScriptTracker from "./Components/Tracker3_javascript";
 import ReactCourseTracker from "./Components/ReactCourseTracker";
+import AdvancedJavaTracker from "./Components/JavaAdvancedTracker";
+import SpringCourseTracker from "./Components/SpringCourseTracker";
 import ExpressCourseTracker from "./Components/ExpressCourseTracker";
 import MongoDbCourseTracker from "./Components/MongoDbCourseTracker";
-import SpringCourseTracker from "./Components/SpringCourseTracker";
 import HibernateCourseTracker from "./Components/HibernateCourseTracker";
+import AllProgressTracker from "./Components/AllProgressTracker";
 
 function App() {
   return (
@@ -46,6 +45,8 @@ function App() {
           <Route path="/mongodb" element={<MongoDbCourseTracker />} />
           <Route path="/spring" element={<SpringCourseTracker />} />
           <Route path="/hibernate" element={<HibernateCourseTracker />} />
+          <Route path="/all-progress" element={<AllProgressTracker />} />
+
         </Routes>
       </main>
 

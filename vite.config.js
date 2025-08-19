@@ -1,8 +1,8 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
-// Change `30days-Nodejs-tracker` to your repo name
+// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/30days-Nodejs-tracker/',
-});
+  base: '/CourceTrackerHub/',  // 👈 important for GitHub Pages
+})
