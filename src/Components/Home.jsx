@@ -16,13 +16,6 @@ import {
 export default function Home() {
   const courses = [
     {
-      id: "java",
-      name: "Java 30-Day Tracker",
-      desc: "Master Java fundamentals and advanced concepts step by step.",
-      icon: <Code2 className="h-10 w-10 text-indigo-500" />,
-      color: "from-indigo-500 to-purple-500",
-    },
-    {
       id: "node",
       name: "Node.js 30-Day Tracker",
       desc: "Learn backend development with Node.js, APIs, and databases.",
@@ -30,11 +23,39 @@ export default function Home() {
       color: "from-green-500 to-emerald-500",
     },
     {
-      id: "express",
-      name: "Express.js 30-Day Tracker",
-      desc: "Build scalable APIs with Express.js and master middleware.",
+      id: "java",
+      name: "Java 30-Day Tracker",
+      desc: "Master Java fundamentals and advanced concepts step by step.",
+      icon: <Code2 className="h-10 w-10 text-indigo-500" />,
+      color: "from-indigo-500 to-purple-500",
+    },
+    {
+      id: "java-advanced",
+      name: "Advanced Java 30-Day Tracker",
+      desc: "Deep dive into advanced Java topics like JDBC, JSP, and Servlets.",
+      icon: <Cpu className="h-10 w-10 text-yellow-400" />,
+      color: "from-yellow-400 to-amber-500",
+    },
+    {
+      id: "javascript",
+      name: "JavaScript 30-Day Tracker",
+      desc: "Master modern JavaScript fundamentals and ES6+ concepts.",
       icon: <Zap className="h-10 w-10 text-yellow-500" />,
       color: "from-yellow-500 to-orange-500",
+    },
+    {
+      id: "html",
+      name: "HTML 30-Day Tracker",
+      desc: "Learn semantic HTML and build strong webpage foundations.",
+      icon: <Globe className="h-10 w-10 text-pink-400" />,
+      color: "from-pink-400 to-purple-600",
+    },
+    {
+      id: "css",
+      name: "CSS 30-Day Tracker",
+      desc: "Master layouts, Flexbox, Grid, and modern CSS styling.",
+      icon: <BookOpen className="h-10 w-10 text-blue-400" />,
+      color: "from-blue-400 to-cyan-500",
     },
     {
       id: "react",
@@ -44,18 +65,11 @@ export default function Home() {
       color: "from-blue-500 to-cyan-500",
     },
     {
-      id: "spring",
-      name: "Spring 30-Day Tracker",
-      desc: "Understand Spring core concepts and build enterprise apps.",
-      icon: <Workflow className="h-10 w-10 text-green-400" />,
-      color: "from-green-400 to-teal-500",
-    },
-    {
-      id: "springboot",
-      name: "Spring Boot 30-Day Tracker",
-      desc: "Develop production-ready apps faster with Spring Boot.",
-      icon: <Zap className="h-10 w-10 text-orange-400" />,
-      color: "from-orange-400 to-red-500",
+      id: "express",
+      name: "Express.js 30-Day Tracker",
+      desc: "Build scalable APIs with Express.js and master middleware.",
+      icon: <Layers className="h-10 w-10 text-yellow-500" />,
+      color: "from-yellow-500 to-orange-500",
     },
     {
       id: "mongodb",
@@ -65,82 +79,58 @@ export default function Home() {
       color: "from-green-300 to-lime-500",
     },
     {
-      id: "mysql",
-      name: "MySQL 30-Day Tracker",
-      desc: "Master relational database design and SQL queries with MySQL.",
+      id: "spring",
+      name: "Spring 30-Day Tracker",
+      desc: "Understand Spring core concepts and build enterprise apps.",
+      icon: <Workflow className="h-10 w-10 text-green-400" />,
+      color: "from-green-400 to-teal-500",
+    },
+    {
+      id: "hibernate",
+      name: "Hibernate 30-Day Tracker",
+      desc: "Master ORM with Hibernate for efficient database interaction.",
       icon: <Database className="h-10 w-10 text-sky-400" />,
       color: "from-sky-400 to-blue-600",
     },
-    {
-      id: "frontend",
-      name: "Frontend 30-Day Tracker",
-      desc: "HTML, CSS, and JavaScript — everything you need to master UI.",
-      icon: <Globe className="h-10 w-10 text-pink-400" />,
-      color: "from-pink-400 to-purple-600",
-    },
-    {
-      id: "dsa",
-      name: "DSA 30-Day Tracker",
-      desc: "Learn Data Structures & Algorithms in Java with problem solving.",
-      icon: <Cpu className="h-10 w-10 text-yellow-400" />,
-      color: "from-yellow-400 to-amber-500",
-    },
-    {
-      id: "mern",
-      name: "MERN 30-Day Tracker",
-      desc: "Fullstack web development using MongoDB, Express, React, Node.",
-      icon: <BookOpen className="h-10 w-10 text-purple-400" />,
-      color: "from-purple-400 to-fuchsia-500",
-    },
-    {
-      id: "devops",
-      name: "DevOps Basics Tracker",
-      desc: "Understand DevOps workflows, CI/CD, Docker, and cloud basics.",
-      icon: <Terminal className="h-10 w-10 text-red-400" />,
-      color: "from-red-400 to-pink-500",
-    },
   ];
 
- const quotes = [
-  "Success is the sum of small efforts repeated day in and day out.",
-  "Don’t watch the clock; do what it does. Keep going.",
-  "Great things never come from comfort zones.",
-  "Push yourself, because no one else is going to do it for you.",
-  "Dream it. Wish it. Do it.",
-  "Small progress is still progress.",
-  "Discipline is the bridge between goals and accomplishment.",
-  "Hard work beats talent when talent doesn’t work hard.",
-  "Focus on being productive instead of busy.",
-  "Consistency is what transforms average into excellence.",
-  "Opportunities don’t happen, you create them.",
-  "Do something today that your future self will thank you for.",
-  "The harder you work for something, the greater you’ll feel when you achieve it.",
-  "Don’t stop until you’re proud.",
-  "Your limitation—it’s only your imagination.",
-  "Sometimes later becomes never. Do it now.",
-  "Great things take time. Stay patient and stay consistent.",
-  "Work hard in silence, let success make the noise.",
-  "Success doesn’t come to you, you go to it.",
-  "Dream bigger. Work harder.",
-  "Believe you can and you’re halfway there.",
-  "Act as if what you do makes a difference. It does.",
-  "Don’t wait for opportunity. Create it.",
-  "It always seems impossible until it’s done.",
-  "Start where you are. Use what you have. Do what you can.",
-  "The secret of getting ahead is getting started.",
-  "Fall seven times and stand up eight.",
-  "A little progress each day adds up to big results.",
-  "Difficult roads often lead to beautiful destinations.",
-  "Stay positive, work hard, and make it happen."
-];
+  const quotes = [
+    "Success is the sum of small efforts repeated day in and day out.",
+    "Don’t watch the clock; do what it does. Keep going.",
+    "Great things never come from comfort zones.",
+    "Push yourself, because no one else is going to do it for you.",
+    "Dream it. Wish it. Do it.",
+    "Small progress is still progress.",
+    "Discipline is the bridge between goals and accomplishment.",
+    "Hard work beats talent when talent doesn’t work hard.",
+    "Focus on being productive instead of busy.",
+    "Consistency is what transforms average into excellence.",
+    "Opportunities don’t happen, you create them.",
+    "Do something today that your future self will thank you for.",
+    "The harder you work for something, the greater you’ll feel when you achieve it.",
+    "Don’t stop until you’re proud.",
+    "Your limitation—it’s only your imagination.",
+    "Sometimes later becomes never. Do it now.",
+    "Great things take time. Stay patient and stay consistent.",
+    "Work hard in silence, let success make the noise.",
+    "Success doesn’t come to you, you go to it.",
+    "Dream bigger. Work harder.",
+    "Believe you can and you’re halfway there.",
+    "Act as if what you do makes a difference. It does.",
+    "Don’t wait for opportunity. Create it.",
+    "It always seems impossible until it’s done.",
+    "Start where you are. Use what you have. Do what you can.",
+    "The secret of getting ahead is getting started.",
+    "Fall seven times and stand up eight.",
+    "A little progress each day adds up to big results.",
+    "Difficult roads often lead to beautiful destinations.",
+    "Stay positive, work hard, and make it happen."
+  ];
 
-
-  // ✅ Pick a random quote
   const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
-
   return (
-   <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white p-6">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white p-6">
       <motion.header
         className="max-w-4xl mx-auto text-center py-12"
         initial={{ opacity: 0, y: -30 }}
@@ -200,3 +190,4 @@ export default function Home() {
     </div>
   );
 }
+  

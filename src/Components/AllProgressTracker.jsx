@@ -1,6 +1,6 @@
+import { motion } from "framer-motion";
 // src/Components/AllProgressTracker.jsx
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 
 export default function AllProgressTracker() {
   // For now, we’ll just check localStorage of each course
@@ -8,10 +8,18 @@ export default function AllProgressTracker() {
     { id: "java", name: "Java", storageKey: "javaCourseProgress_v1" },
     { id: "node", name: "Node.js", storageKey: "nodeCourseProgress_v1" },
     { id: "react", name: "React", storageKey: "reactCourseProgress_v1" },
-    { id: "express", name: "Express.js", storageKey: "expressCourseProgress_v1" },
+    {
+      id: "express",
+      name: "Express.js",
+      storageKey: "expressCourseProgress_v1"
+    },
     { id: "mongodb", name: "MongoDB", storageKey: "mongodbCourseProgress_v1" },
     { id: "spring", name: "Spring", storageKey: "springCourseProgress_v1" },
-    { id: "hibernate", name: "Hibernate", storageKey: "hibernateCourseProgress_v1" },
+    {
+      id: "hibernate",
+      name: "Hibernate",
+      storageKey: "hibernateCourseProgress_v1"
+    }
     // add more when needed
   ];
 
@@ -25,7 +33,11 @@ export default function AllProgressTracker() {
         completed += Object.values(day).filter(Boolean).length;
       });
       if (total === 0) return { percent: 0, completed, total };
-      return { percent: Math.round((completed / total) * 100), completed, total };
+      return {
+        percent: Math.round((completed / total) * 100),
+        completed,
+        total
+      };
     } catch {
       return { percent: 0, completed: 0, total: 0 };
     }
